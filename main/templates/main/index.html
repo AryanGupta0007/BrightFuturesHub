@@ -1,6 +1,15 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block title %} Index {% endblock %}
-{% block content %}
-    <a href="{% url "cf-home" %}"><button> CrowdFunding Home </button></a>
-    <a href="{% url "logout" %}"><button>Logout</button></a>
+
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static "main/tests.css" %}">
 {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <a href="{% url "cf-home" %}"><button> CrowdFunding Home </button></a>
+        <a href="{% url "logout" %}"><button>Logout</button></a>
+
+    </div>
+    {% endblock %}
